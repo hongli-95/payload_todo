@@ -27,9 +27,8 @@ export default async function TodoPage({ params }: { params: { id: string } }) {
 
       <hr />
       <div className="p-2">
-        <p>
-          Created At: {todo.createdAt} ~ Updated At: {todo.updatedAt}
-        </p>
+        <p>Created At: {todo.createdAt}</p>
+        <p>Updated At: {todo.updatedAt}</p>
       </div>
       <div className="p-2">
         {todo.media ? (
@@ -41,6 +40,7 @@ export default async function TodoPage({ params }: { params: { id: string } }) {
           />
         ) : null}
       </div>
+      <div className="flex justify-center gap-4"></div>
     </div>
   )
 }

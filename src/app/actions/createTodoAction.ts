@@ -1,4 +1,5 @@
 import config from '@/payload.config'
+import { redirect } from 'next/navigation'
 import { getPayload } from 'payload'
 
 export default async function CreateTodo(formData: FormData) {
@@ -40,4 +41,6 @@ export default async function CreateTodo(formData: FormData) {
       media: uploadedMedia.id,
     },
   })
+
+  redirect('/')
 }

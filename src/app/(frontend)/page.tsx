@@ -12,20 +12,19 @@ export default async function HomePage({ searchParams }: { searchParams: { page?
   const headers = await getHeaders()
   const payloadConfig = await config
 
-  const { page } = await searchParams
-  const currentPage = page ? parseInt(page, 10) : 1
-
   // This is where the data comes from
   const payload = await getPayload({ config: payloadConfig })
 
   // check for the currently logged in user
   const { user } = await payload.auth({ headers })
+  const { page } = await searchParams
+  const currentPage = page ? parseInt(page, 10) : 1
 
   const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
 
   const todos = await payload.find({
     collection: 'todos',
-    limit: 2,
+    limit: 3,
     page: currentPage,
     sort: ['+createdAt'],
   })
