@@ -30,11 +30,20 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
   "editor.formatOnSaveMode": "file",
   "typescript.tsdk": "node_modules/typescript/lib",
   "[javascript][typescript][typescriptreact]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
     }
-  }
+  },
+  "postman.settings.dotenv-detection-notification-visibility": false
 }
